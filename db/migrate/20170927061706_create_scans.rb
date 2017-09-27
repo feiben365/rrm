@@ -1,7 +1,7 @@
 class CreateScans < ActiveRecord::Migration[5.0]
   def change
     create_table :scans do |t|
-      t.string :scan_eventid
+      t.string :scan_id
       t.string :user_openid
       t.string :user_id
       t.string :catagory
@@ -11,6 +11,6 @@ class CreateScans < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :scans, :scan_eventid
+    add_index :scans, :scan_id
   end
 end
