@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927060314) do
+ActiveRecord::Schema.define(version: 20170927061706) do
+
+  create_table "scans", force: :cascade do |t|
+    t.string   "scan_eventid"
+    t.string   "user_openid"
+    t.string   "user_id"
+    t.string   "catagory"
+    t.string   "parent_id"
+    t.datetime "scan_at"
+    t.datetime "comfirmed_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["scan_eventid"], name: "index_scans_on_scan_eventid"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
