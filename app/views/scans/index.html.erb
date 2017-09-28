@@ -1,0 +1,18 @@
+<table class="table">
+<tr>
+  <th>scan</th>
+  <th>user_openid</th>
+  <th>user_id</th>
+  <th>category</th>
+  <th>parent_id</th>
+</tr>
+<% @scans.each do |scan| %>
+  <tr>
+    <td><%=  scan.scan%></td>
+    <td><%=  scan.user_openid%></td>
+    <td><%=  scan.user_id%></td>
+    <td><%=  scan.category%></td>
+    <td><%=  scan.parent_id%></td>
+  </tr>
+<% end %>
+</table>
