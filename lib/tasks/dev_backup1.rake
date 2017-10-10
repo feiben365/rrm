@@ -11,11 +11,10 @@ namespace :dev do
                   :user_id => c["user_id"], :category => c["category"],
                   :parent_id => c["parent_id"], :scan_at_u => c["scan_at"],
                   :comfirmed_at => c["comfirmed_at"], )
-        end
-      end
-      puts "Total: #{Scan.count} scans"
-
-
-
-    end
   end
+end
+
+puts "Total: #{Scan.count} scans"
+
+  end
+end

@@ -38,6 +38,8 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'rest-client'
+gem 'will_paginate'
+
 
 
 group :development, :test do

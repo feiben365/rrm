@@ -1,18 +1,24 @@
-<table class="table">
+<table class="table table-striped table-condensed">
 <tr>
-  <th>scan</th>
-  <th>user_openid</th>
-  <th>user_id</th>
-  <th>category</th>
-  <th>parent_id</th>
+  <th colspan="1">扫描事件</th>
+  <th colspan="1">扫描时间</th>
+  <th colspan="1">扫描时间U</th>
+  <th colspan="1">用户id</th>
+  <th colspan="1">持有编号</th>
+  <th colspan="1">二维码持有人</th>
 </tr>
 <% @scans.each do |scan| %>
   <tr>
-    <td><%=  scan.scan%></td>
-    <td><%=  scan.user_openid%></td>
-    <td><%=  scan.user_id%></td>
-    <td><%=  scan.category%></td>
-    <td><%=  scan.parent_id%></td>
+    <td><%=  scan.scan %></td>
+    <td><%=  scan.scan_at %></td>
+    <td><%=  scan.scan_at_u %></td>
+    <td><%=  scan.user_id %></td>
+    <td><%=  scan.category %></td>
+    <td><%=  scan.parent_id %></td>
   </tr>
 <% end %>
 </table>
+
+<div class="text-center">
+  <%= will_paginate @scans%>
+</div>

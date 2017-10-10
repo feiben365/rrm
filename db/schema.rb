@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 20170927061706) do
     t.string   "user_id"
     t.string   "category"
     t.string   "parent_id"
-    t.datetime "scan_at"
-    t.datetime "comfirmed_at"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "scan_at_u"
+    t.string   "confirmed_at_u"
+    t.datetime "scan_at",        null: false
+    t.datetime "comfirmed_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.index ["scan"], name: "index_scans_on_scan"
   end
 
